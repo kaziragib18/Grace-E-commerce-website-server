@@ -29,6 +29,9 @@ app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
+app.get('/', (req, res) => {
+      res.send('GRACE. Server is running')
+})
 
 app.listen(process.env.PORT || 5000, () => {
       console.log("Server is running");
